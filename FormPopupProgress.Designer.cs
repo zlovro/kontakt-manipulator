@@ -30,11 +30,40 @@ namespace smanip
         /// </summary>
         private void InitializeComponent()
         {
-            this.components    = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize    = new System.Drawing.Size(800, 450);
-            this.Text          = "FormPopupProgress";
+            this.progressBar   = new System.Windows.Forms.ProgressBar();
+            this.labelProgress = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(12, 35);
+            this.progressBar.Name     = "progressBar";
+            this.progressBar.Size     = new System.Drawing.Size(328, 23);
+            this.progressBar.Step     = 0;
+            this.progressBar.TabIndex = 0;
+            // 
+            // labelProgress
+            // 
+            this.labelProgress.Location  = new System.Drawing.Point(12, 9);
+            this.labelProgress.Name      = "labelProgress";
+            this.labelProgress.Size      = new System.Drawing.Size(328, 23);
+            this.labelProgress.TabIndex  = 1;
+            this.labelProgress.Text      = "Progress";
+            this.labelProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FormPopupProgress
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode       = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize          = new System.Drawing.Size(355, 65);
+            this.Controls.Add(this.labelProgress);
+            this.Controls.Add(this.progressBar);
+            this.Name = "FormPopupProgress";
+            this.Text = "FormPopupProgress";
+            this.ResumeLayout(false);
         }
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label       labelProgress;
 
         #endregion
 
